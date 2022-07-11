@@ -19,15 +19,15 @@ export default function Sidenav() {
                     <Navbar.Collapse id="navbar-dark-example">
                         <div className="navbar-collapse row m-auto ">
                             <div className="navbar-nav col-md-10">
-                                <a href="/dashboard" className="nav-item dash-link nav-link active bg-secondary"> Dashboard</a>
-                                <a href="student" className="nav-item nav-link dash-link "> Student Management </a>
+                            <a href="/dashboard" className="nav-item dash-link nav-link active bg-secondary"> Dashboard</a>
+                                <a href="/student" className="nav-item nav-link dash-link "> Student Management </a>
                                 <a href="/staff" className="nav-item nav-link dash-link"> Staff Management </a>
-                                <a href="" className="nav-item nav-link dash-link"> Subject Management </a>
+                                <a href="/subject" className="nav-item nav-link dash-link"> Subject Management </a>
                                 <a href="/payment" className="nav-item nav-link dash-link"> Payment Management </a>
                                 <a href="/onlinefees" className="nav-item nav-link dash-link"> Fees Management </a>
                                 <a href="/exam" className="nav-item nav-link dash-link"> Exam Management </a>
-                                <a href="timetable" className="nav-item nav-link dash-link"> Timetable Management </a>
-                                <a href="#" className="nav-item nav-link dash-link"> Feedbacks/Suggestions </a>
+                                <a href="/timetable" className="nav-item nav-link dash-link"> Timetable Management </a>
+                                <a href="/feedback" className="nav-item nav-link dash-link"> Feedbacks/Suggestions </a>
                             </div>
                         </div>
                     </Navbar.Collapse>
@@ -56,3 +56,4 @@ export default function Sidenav() {
         </div>
     )
 }
+

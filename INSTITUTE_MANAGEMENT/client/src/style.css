@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 * {
     /* overflow-x: hidden; */
     scroll-behavior: smooth;
@@ -59,11 +60,13 @@
         margin-left: 30px;
         margin-top: 50px;
     }
+
     .hpimage .topic {
         font-size: 80px;
         line-height: 90px;
         color: white;
     }
+
     .hpimage .hptext {
         margin-top: 50px;
     }
@@ -75,6 +78,7 @@
         margin-left: 20px;
         margin-top: 0px;
     }
+
     .hpimage .topic {
         font-size: 50px;
         line-height: 50px;
@@ -507,7 +511,7 @@ li {
     border-radius: 0px 5px 5px 0px;
 }
 
-.btn-dashb{
+.btn-dashb {
     color: rgb(43, 39, 39);
     background-color: var(--primary1);
     padding: 10px 10px;
@@ -522,6 +526,25 @@ li {
 }
 
 .btn-dashb:hover {
+    color: rgb(243, 242, 242) !important;
+    background-color: var(--primary2);
+}
+
+.btn-dashbc{
+    color: rgb(43, 39, 39);
+    background-color: var(--primary1);
+    padding: 10px 10px;
+    height: 40px;
+    width: 580px;
+    text-align: center;
+    border: none;
+    font: 'Raleway', sans-serif;
+    font-size: 18px;
+    transition-duration: 0.1s;
+    border-radius: 0;
+}
+
+.btn-dashbc:hover {
     color: rgb(243, 242, 242) !important;
     background-color: var(--primary2);
 }
@@ -546,21 +569,9 @@ li {
     text-align: center !important;
 }
 
-.btn-dashbc{
-    color: rgb(43, 39, 39);
-    background-color: var(--primary1);
-    padding: 10px 10px;
-    height: 40px;
-    width: 580px;
-    text-align: center;
-    border: none;
-    font: 'Raleway', sans-serif;
-    font-size: 18px;
-    transition-duration: 0.1s;
-    border-radius: 0;
-}
 
 /* inputs */
+
 
 /* input-text */
 
@@ -588,7 +599,7 @@ li {
 .my-input2:focus {
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 0px 10px 0 rgba(223, 238, 9, 0.39);
-    border: yellow !important;
+    border: #ffff00 !important;
 }
 
 .my-input2 {
@@ -650,13 +661,16 @@ li {
     .login-image .col-md-8 {
         display: none;
     }
+
     .login-sec {
         background: white;
     }
+
     .login-card .card-body {
         padding-left: 110px;
         padding-right: 110px;
     }
+
     .login-image .pic-body {
         width: 100%;
     }
@@ -708,13 +722,16 @@ li {
         flex: 1 1;
         align-items: stretch;
     }
+
     .navbar-vertical .dash-link {
         width: 100%;
         margin-top: 20px;
     }
+
     .navbar-vertical.navbar-expand-lg .navbar-collapse>* {
         min-width: 100%;
     }
+
     .navbar-vertical.navbar-expand-lg .navbar-nav {
         flex-direction: column;
         margin-right: -1.5rem;
@@ -981,7 +998,7 @@ li {
     background: -moz-linear-gradient(top, rgba(255, 86, 65, 1) 0%, rgba(253, 50, 97, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(255, 86, 65, 1) 0%, rgba(253, 50, 97, 1) 100%);
     background: linear-gradient(to bottom, rgba(255, 86, 65, 1) 0%, rgba(253, 50, 97, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff5641', endColorstr='#fd3261', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff5641', endColorstr='#fd3261', GradientType=0);
     border-radius: 4px;
     text-align: center;
     margin: 60px 0 50px;
@@ -1053,7 +1070,7 @@ li {
     left: 50%;
 }
 
-.dbox_action_btn {
+.dbox__action__btn {
     border: none;
     background: #FFF;
     border-radius: 19px;
@@ -1076,7 +1093,7 @@ li {
     background: -moz-linear-gradient(top, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
     background: -webkit-linear-gradient(top, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
     background: linear-gradient(80deg, rgba(95, 130, 245, 0.671), rgba(241, 218, 7, 0.37));
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcbe1b', endColorstr='#f85648', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fcbe1b', endColorstr='#f85648', GradientType=0);
 }
 
 .dbox--color-2 .dbox__icon:after {
@@ -1098,7 +1115,7 @@ li {
     background: -moz-linear-gradient(top, rgba(183, 71, 247, 1) 0%, rgba(108, 83, 220, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(183, 71, 247, 1) 0%, rgba(108, 83, 220, 1) 100%);
     background: linear-gradient(to bottom, rgba(183, 71, 247, 1) 0%, rgba(108, 83, 220, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b747f7', endColorstr='#6c53dc', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#b747f7', endColorstr='#6c53dc', GradientType=0);
 }
 
 .dbox--color-3 .dbox__icon:after {
@@ -1152,4 +1169,12 @@ li {
 
 .social-media p a:hover span {
     color: #003e85;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background-color: #4d4d4d; */
 }

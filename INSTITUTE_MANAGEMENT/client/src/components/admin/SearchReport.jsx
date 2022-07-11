@@ -7,7 +7,7 @@ import SearchExamModal from "../modal/exammodel/SearchExamModal";
 import PrintReportModal from "../modal/exammodel/PrintReportModal";
 
 
-const SearchEs = (props) => {
+const SearchReport = (props) => {
 
   const [show, setShow] = useState(false);
   const [exam_schedules, setexamSchedules] = useState(false);
@@ -35,7 +35,7 @@ const SearchEs = (props) => {
         size="lg"
         centered
       >
-        <SearchExamModal exam_schedules={exam_schedules} />
+        <PrintReportModal exam_schedules={exam_schedules} />
         <Modal.Footer>
           <Button variant="danger" onClick={handleClose}>
             Exit
@@ -48,4 +48,4 @@ const SearchEs = (props) => {
   );
 }
 
-export default SearchEs;
+export default SearchReport;

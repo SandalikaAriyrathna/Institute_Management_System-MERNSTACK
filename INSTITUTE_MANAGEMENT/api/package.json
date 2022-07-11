@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "institute management",
   "main": "index.js",
-  "author": "Prathibha Sathyanjalee",
+  "author": "Sandalika Ariyarathna",
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js"

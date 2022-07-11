@@ -3,24 +3,22 @@ import "../style.css"
 import pin from '../images/svg.png'
 import bug from '../images/bug.png'
 import cog from '../images/cog.png'
-import fb from '../images/facebook.png'
-import inst from '../images/instagram.png'
-import twt from '../images/twitter.png'
 import * as Icon from 'react-bootstrap-icons';
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 // import Header from '../layout/Header'
 
 export default function Homepage() {
     return (
         <div>
-            <Header/>
+            <Header />
             <div className="hpimage " data-setbg="images/">
 
                 <br /><br /><br /><br />
                 <div className="hpbox">
                     <span className="topic">
                         Join with the best tutor to find your child's
-                        <span className="white" style={{ lineheight: '110px' }}> potential  </span>
+                        <span className="white" style={{ lineheight: '110px' }}> potential</span>
                     </span>
                 </div>
 
@@ -35,7 +33,7 @@ export default function Homepage() {
                             <h1>A Great way to grow your child</h1>
                             <p className="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
-                        <div className="col-sm-6 ">
+                        <div className="col-sm-6 text-center">
                             <img alt="image" className="img-fluid img-side" src={pin} style={{ width: '400px' }} />
                         </div>
                     </div>
@@ -101,7 +99,7 @@ export default function Homepage() {
 
 
             <div className="container-fluid bg-gradient-yellow">
-                <br /> <br /> <br /> <br />
+                <br /> <br /> 
                 <div className="row">
                     <div className="col-sm-5 m-auto text-center">
                         <h3>Subscribe to our Newsletter</h3>
@@ -114,41 +112,10 @@ export default function Homepage() {
                         </form>
                     </div>
                 </div>
-                <br /><br />
+                <br />
             </div>
-            <div className="div row">
+                <Footer />
 
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-                    <div class="container-fluid bg-white ">
-                        <br /> <br /> <br />
-                        <h1 class="text-center"> Apply now</h1>
-                        <h6 class="text-center grey">Hurry up! only limited seats available</h6>
-
-
-                    </div>
-                    <br />
-
-                    <div class="text-center">
-                        <br /><br/><br/>
-                        {/* <button href="#" class="btn btn-def btn-def-hoverout "> Apply Now</button> */}
-                    </div>
-                </div>
-                <div class="col-md-4  text-center">
-                    <br /> <br />
-                    <br /> <br />
-                    <div class="social-media">
-                        <p class="mb-0 d-flex">
-                            <a href="#" class="d-flex align-items-center justify-content-center"> <img src={fb} alt="image" style={{ height: '25px', width: '25px' }} /></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"> <img src={twt} alt="image" style={{ height: '25px', width: '25px' }} /></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"> <img src={inst} alt="image" style={{ height: '25px', width: '25px' }} /></a>
-                        </p>
-                    </div>
-                </div>
-                <br /><br />
-            </div>
         </div>
     )
 }

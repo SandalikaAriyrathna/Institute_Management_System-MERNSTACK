@@ -3,12 +3,14 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { Col, Row, Form } from "react-bootstrap";
-import { MDBCol } from 'mdb-react-ui-kit';
+// import { MDBCol } from 'mdb-react-ui-kit';
 import "../../../style.css";
 import axios from 'axios';
+import swal from 'sweetalert'
 
 
 export default function AddExModal(props) {
+
   const [show, setShow] = useState(false);
 
   const [grade, setGrade] = useState("");
@@ -25,20 +27,43 @@ export default function AddExModal(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (grade.length === 0 || subject.length === 0 || date.length === 0 || time.length === 0) {
+      swal(" Fields Cannot be empty !", "Please enter all data !", "error");
+    }
+    else{
     console.log(scheduleData);
     axios.post('http://localhost:5000/api/exam_schedules/addexam', scheduleData).then(function (res) {
+      // alert("Added Successfully");
       console.log(res);
       setGrade("");
+      setSubject("");
+      setDate("");
+      setTime("");
     })
       .catch(function (error) {
         console.log(error);
       })
+      swal({ text: "Exam Successfully Added", icon: "success", button: "Okay!"}).then((value) => {
+        window.location = '/exam'; 
+     });
+    }
   }
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  function disableDates(){
+    var today,dd,mm,yyyy;
+    today = new Date();
+    dd = today.getDate()+1;
+    mm = today.getMonth()+1;
+    yyyy = today.getFullYear();
+    return yyyy+"-"+mm+"-"+dd;
+  }
+
   return (
     <>
+
       <Button className='btn btn-dashb me-5' onClick={handleShow}>
         Add Schedule
       </Button>
@@ -67,17 +92,17 @@ export default function AddExModal(props) {
                 <Col sm={10}>
                   <select className="Col-3" aria-label="Default select example" style={{ height: "35px", width: "40%" }} onChange={(e) => { setGrade(e.target.value) }}>
                     <option selected>Select grade</option>
-                    <option value="1">Grade 1</option>
-                    <option value="2">Grade 2</option>
-                    <option value="3">Grade 3</option>
-                    <option value="4">Grade 4</option>
-                    <option value="5">Grade 5</option>
-                    <option value="6">Grade 6</option>
-                    <option value="7">Grade 7</option>
-                    <option value="8">Grade 8</option>
-                    <option value="9">Grade 9</option>
-                    <option value="10">Grade 10</option>
-                    <option value="11">Grade 11</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
                   </select>
                 </Col>
 
@@ -97,6 +122,7 @@ export default function AddExModal(props) {
                     <option value="English">English</option>
                     <option value="Maths">Maths</option>
                     <option value="ICT">ICT</option>
+                    <option value="Science">Science</option>
                   </select>
                 </Col>
 
@@ -107,7 +133,7 @@ export default function AddExModal(props) {
                 Date
               </Form.Label>
               <Col sm="5">
-                <Form.Control type="date" onChange={(e) => { setDate(e.target.value) }} />
+                <Form.Control type="date" min={disableDates()} onChange={(e) => { setDate(e.target.value) }} />
               </Col>
             </Form.Group>
 
@@ -125,7 +151,7 @@ export default function AddExModal(props) {
               Add Schedule
             </Button>
             <Button variant="danger" onClick={handleClose}>
-              Cancel
+              Exit
             </Button>
 
           </Modal.Footer>
