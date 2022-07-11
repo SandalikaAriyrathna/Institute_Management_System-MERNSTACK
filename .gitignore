@@ -1,0 +1,13 @@
+INSTITUTE_MANAGEMENT/api/node_modules
+INSTITUTE_MANAGEMENT/client/node_modules
+INSTITUTE_MANAGEMENT/api/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/.eslintcache
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/.eslintcache
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/default-development/1.pack
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/default-development/index.pack
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/default-development/index.pack.old
+INSTITUTE_MANAGEMENT/client/src/App.js
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/.eslintcache
+INSTITUTE_MANAGEMENT/client/node_modules/.cache/default-development/1.pack
+INSTITUTE_MANAGEMENT/client/src/pages/StaffAdmin.jsx
+
