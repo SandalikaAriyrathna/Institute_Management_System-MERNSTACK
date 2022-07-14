@@ -5,24 +5,45 @@ import axios from "axios";
 import "../style.css"
 
 export default function Login() {
-    const userRef =useRef();
-    const passwordRef =useRef();
-    const{user,dispatch,isFetching} = useContext(Context)
+    // const userRef =useRef();
+    // const passwordRef =useRef();
+    // const{user,dispatch,isFetching} = useContext(Context)
 
-    const handleSubmit= async (e) =>{
-        e.preventDefault();
-        dispatch({type:"LOGIN_START"})
-        try{
-        const res = await axios.post("/StudentAuth/login/",{
-            username:userRef.current.value,
-            password:passwordRef.current.value,
-        })
-        dispatch({type:"LOGIN_SUCCESS",payload: res.data});
-        }catch(err){
-        dispatch({type:"LOGIN_FAILURE"});
-        }
+    // const handleSubmit= async (e) =>{
+    //     e.preventDefault();
+    //     dispatch({type:"LOGIN_START"})
+    //     try{
+    //     const res = await axios.post("/StudentAuth/login/",{
+    //         username:userRef.current.value,
+    //         password:passwordRef.current.value,
+    //     })
+    //     dispatch({type:"LOGIN_SUCCESS",payload: res.data});
+    //     }catch(err){
+    //     dispatch({type:"LOGIN_FAILURE"});
+    //     }
+    // };
+
+    const userRef = useRef();
+    const passwordRef = useRef();
+    const { isFetching, dispatch } = useContext(Context);
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      dispatch({ type: "LOGIN_START" });
+      try {
+        const res = await axios.post("/StudentAuth/login", {
+          username: userRef.current.value,
+          password: passwordRef.current.value,
+        });
+        dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+       
+      } catch (err) {
+        dispatch({ type: "LOGIN_FAILURE" });
+  
+      }
     };
-    console.log(user);
+
+
     return (
         <div>
             <div class="container-fluid">
@@ -63,18 +84,19 @@ export default function Login() {
 
                                             <div class="form group">
                                                 <label for="" > Username </label>
-                                                <input type="username" class="form-control" placeholder="Enter your username" ref={userRef} />
+                                                <input type="text" id="loginName" for="loginName" class="form-control" placeholder="Enter your username" ref={userRef} />
 
                                             </div>
                                             <div class="form group">
                                                 <label for="" > Password </label>
-                                                <input type="password" class="form-control" placeholder="Enter your password" ref={passwordRef}/>
+                                                <input type="password" id="loginPassword" for="loginPassword" class="form-control" placeholder="Enter your password" ref={passwordRef}/>
 
                                             </div>
                                             <a href=""> Forgot Password</a>
                                             <br /> <br />
-                                            <input type="submit" value="Login" class="btn btn-curved" role="button" style={{width: '100%'}} />
+                                            <input type="submit" value="Login" class="btn btn-curved" role="button" disabled={isFetching} style={{width: '100%'}} />
                                                
+
                                         </form>
                                     </span>
                                 </span>

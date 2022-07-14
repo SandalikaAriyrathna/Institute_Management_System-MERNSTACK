@@ -74,7 +74,9 @@ export default function Header() {
                             )
                         }
                     </div>
-                    <a href="" className="btn btn-def" onClick={handleLogout}>{user && "Log out"}</a>
+
+                    {user && <a href="/" class="btn btn-dark btn-sm" onClick={handleLogout} style={{"marginRight":"10px", color:"white", width:"200px",height:"40px"}}>LOGOUT</a>}
+
                 </Container>
             </Navbar>
         </div >

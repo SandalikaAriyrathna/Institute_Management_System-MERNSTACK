@@ -159,8 +159,8 @@ const getData2 = async (e) => {
 return (
   <>
 
-    <Button className='btn-dashb me-5' variant="warning" onClick={handleShow}>
-      Add Fees Payment
+    <Button className='btn-dashb me-5' style={{ marginLeft: "50px" }} variant="warning" onClick={handleShow}>
+      Add Online Fees Payment
     </Button>
 
 

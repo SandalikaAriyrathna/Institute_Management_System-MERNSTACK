@@ -40,7 +40,11 @@ export default function OnlineFees() {
 
                     <AddFees />
 
-                    <Link to="/adminviewfees" className="btn-dashb text-decoration-none d-flex justify-content-center align-items-center
+                    <Link to="/physicalfees" className="btn-dashb text-decoration-none d-flex justify-content-center align-items-center
+">                      Add Physical Fees payment manage
+                    </Link>
+
+                    <Link to="/adminviewfees" style={{ marginLeft: "50px" }} className="btn-dashb text-decoration-none d-flex justify-content-center align-items-center
 ">                        View All Fees Payments
                     </Link>
 

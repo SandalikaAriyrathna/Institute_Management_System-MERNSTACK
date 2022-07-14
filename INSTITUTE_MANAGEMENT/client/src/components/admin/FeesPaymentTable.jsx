@@ -10,7 +10,7 @@ import DeleteFees from '../modal/feesmodal/DeleteFees';
 import PhysicalUpdateFees from '../modal/feesmodal/PhysicalUpdateFees';
 import PhysicalDeleteFees from '../modal/feesmodal/PhysicalDeleteFees';
 // import { FeesTable } from './TableView';
-
+import Button from 'react-bootstrap/Button';
 
 
 export default function FeesPaymentTable() {
@@ -107,7 +107,8 @@ export default function FeesPaymentTable() {
 
   return (
     <>
-     
+
+
     <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-secondary" style={{background:'linear-gradient(to right, #74ebd5, #acb6e5)'}}>
@@ -322,7 +323,14 @@ export default function FeesPaymentTable() {
                 
             </div>
         </div>
+        
         <div class="col py-3">
+        <Link to="/onlinefees" style={{ marginLeft: "50px",float:"right" }} className="btn-dashb text-decoration-none d-flex justify-content-center align-items-center
+">                       Admin Dashboard
+                    </Link>
+                    <Link to="/physicalfees" style={{ marginLeft: "50px",float:"right"  }} className="btn-dashb text-decoration-none d-flex justify-content-center align-items-center
+">                        Staff Dashboard
+                    </Link>
         <UpdateFees/> <DeleteFees/><br />
         <button onClick={handlePrint} type="button" class="btn btn-primary btn-sm-4 float-end" style={{height:"50px", width:"10%", float: 'right' }}>
                   Print Report
@@ -413,6 +421,7 @@ export default function FeesPaymentTable() {
                 
      <br /><br />
      <div class="col py-3">
+
      <PhysicalUpdateFees/><PhysicalDeleteFees/> <br />
         <button onClick={handlePrint} type="button" class="btn btn-primary btn-sm-4 float-end" style={{height:"50px", width:"10%", float: 'right' }}>
                   Print Report
